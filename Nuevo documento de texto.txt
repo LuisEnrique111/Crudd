@@ -1,0 +1,30 @@
+DROP SCHEMA dbContacto;
+CREATE SCHEMA dbContacto;
+USE dbContacto;
+
+CREATE TABLE calendarie (
+id int auto_increment,
+dni varchar(100),
+nombre varchar(100),
+apellido varchar(100),
+fecha varchar(100),
+sexo varchar(100),
+celular varchar(100),
+correo varchar(100),
+direccion varchar(100),
+colesterol varchar(100),
+glucosa varchar(100),
+hemoglobina varchar(100),
+seguro varchar(100),
+primary key (id)
+);
+
+INSERT INTO calendarie (dni, nombre, apellido, fecha, sexo, celular, correo, direccion, colesterol, glucosa, hemoglobina, seguro) 
+VALUES
+('12345678', 'Juan', 'Pérez', '1990-01-01', 'Masculino', '1234567890', 'juan.perez@example.com', 'Calle 123, 456', 'Normal', 'Normal', 'Normal', 'Oxxo Salud'),
+('87654321', 'Maria', 'González', '1995-07-10', 'Femenino', '9876543210', 'maria.gonzalez@example.com', 'Avenida 456, 789', 'Alto', 'Alto', 'Alto', 'Walmart Salud'),
+('11111111', 'Pedro', 'López', '1980-02-22', 'Masculino', '1111111111', 'pedro.lopez@example.com', 'Paseo 123, 456', 'Bajo', 'Bajo', 'Bajo', 'Axa Salud'),
+('22222222', 'Sofía', 'Martínez', '1992-03-15', 'Femenino', '2222222222', 'sofia.martinez@example.com', 'Calle 456, 789', 'Normal', 'Normal', 'Normal', 'Banorte Salud'),
+('33333333', 'Carlos', 'Ramos', '1985-06-10', 'Masculino', '3333333333', 'carlos.ramos@example.com', 'Avenida 789, 123', 'Alto', 'Alto', 'Alto', 'Globo Salud');
+
+SELECT * FROM calendarie;
